@@ -89,11 +89,19 @@ Next, we build an image -
    ```sh
     docker build --platform=linux/arm64 --tag [NAME] .
    ```
+   
+   <img width="1118" alt="image" src="https://user-images.githubusercontent.com/31993523/220771498-1ce68650-8808-4975-9bef-95bc9f70d6b9.png">
+
+
 We can check if the image is exported by
    ```sh
    docker images
    ```
+   
+   <img width="784" alt="image" src="https://user-images.githubusercontent.com/31993523/220771627-24aece87-0f44-4174-8596-378615cd994d.png">
+
 We can also check out the image in Docker Desktop app.
+
 
 We can now run the image by -
   Windows-
@@ -105,9 +113,6 @@ We can now run the image by -
    ```sh
    docker run --platform=linux/arm64 --name [Container_Name] [Tag given to the image] 
    ```
-
-
-
 
 
 
