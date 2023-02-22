@@ -43,7 +43,14 @@ To get a local copy up and running follow these simple example steps.
    ```sh
    pip install -r requirements.txt
    ```
-4. For mac, we assign our app to flask
+4. For Windows,
+   ```sh
+   set FLASK_APP=flaskr
+   set FLASK_ENV=development
+   flask run
+   ```
+   
+   For mac, we assign our app to flask
    ```sh
    export FLASK_APP=app.py 
    ```
