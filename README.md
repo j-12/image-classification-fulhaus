@@ -30,7 +30,7 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-* python 3.8
+* python 3.8, git
 
 ### Installation
 
