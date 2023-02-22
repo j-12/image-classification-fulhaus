@@ -7,6 +7,7 @@ import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras.models import load_model
 from PIL import Image
+import numpy as np
 
 from tensorflow.keras.preprocessing.image import load_img, img_to_array
 
@@ -28,29 +29,32 @@ def predict(filename, model):
     img = load_img(filename, target_size=(256, 256))
     img_array = tf.keras.utils.img_to_array(img)
     img_array = tf.expand_dims(img_array, 0)
-    result = model.predict(img_array)
-    # score = tf.nn.softmax(predictions[0])
+    predictions = model.predict(img_array)
+    score = tf.nn.softmax(predictions[0])
+    class_names = ['Bed', 'Chair', 'Sofa']
+    class_result = class_names[np.argmax(score)]
+    probability = round(100 * np.max(score),2)
     # print(score)
     # img = img_to_array(img)
     # img = img.reshape(1, 256, 256, 3)
     # img = img.astype('float32')
     # img = img/255.0
     # result = model.predict(img)
-    dict_result = {}
-    for i in range(3):
-        dict_result[result[0][i]] = classes[i]
-    res = result[0]
-    res.sort()
-    res = res[::-1]
-    prob = res
-    # prob = res[:3]
-
-    prob_result = []
-    class_result = []
-    for i in range(3):
-        prob_result.append((prob[i]*100).round(2))
-        class_result.append(dict_result[prob[i]])
-    return class_result, prob_result
+    # dict_result = {}
+    # for i in range(3):
+    #     dict_result[result[0][i]] = classes[i]
+    # res = result[0]
+    # res.sort()
+    # res = res[::-1]
+    # prob = res
+    # # prob = res[:3]
+    #
+    # prob_result = []
+    # class_result = []
+    # for i in range(3):
+    #     prob_result.append((prob[i]*100).round(2))
+    #     class_result.append(dict_result[prob[i]])
+    return class_result, probability
 
 
 @app.route('/')
@@ -85,7 +89,7 @@ def success():
                 }
             except Exception as e:
                 print(str(e))
-                error = 'This image from this site is not accesible or inappropriate input'
+                error = 'This image from this site is not accessible or inappropriate input'
             if len(error) == 0:
                 return render_template('success.html', img=img, predictions=predictions)
             else:
@@ -100,12 +104,8 @@ def success():
                 class_result, prob_result = predict(img_path, model)
 
                 predictions = {
-                        "class1": class_result[0],
-                        "class2": class_result[1],
-                        "class3": class_result[2],
-                        "prob1": prob_result[0],
-                        "prob2": prob_result[1],
-                        "prob3": prob_result[2],
+                        "class": class_result,
+                        "prob": prob_result
                 }
                 # return jsonify({'prediction': str(predictions)})
             else:
