@@ -71,9 +71,9 @@ We can see how the model is able to correctly classify the image as a 'Bed' with
 
 To set up the project easily and to deliver software in ready packages with all the dependencies and their version, we create a Docker image. It consists of everything the software needs to run including libraries, system tools, code, and runtime.
 
-For this, we create a Dockerfile. This text file consists of all the commands a user could call on the command link to assemble an image. Please refer to 'Dockerfile' to check it out. //add link
+For this, we create a Dockerfile. This text file consists of all the commands a user could call on the command link to assemble an image. Please refer to <a href="https://github.com/j-12/image-classification-fulhaus/blob/master/Dockerfile">Dockerfile</a> to check it out.
 
-Next, we build a requirements.txt that has all the information about libraries and their versions that would be required for our project. //add link
+Next, we build a <a href="https://github.com/j-12/image-classification-fulhaus/blob/master/requirements.txt">requirements.txt</a> that has all the information about libraries and their versions that would be required for our project. 
    ```sh
    pip freeze > requirements.txt
    ```
