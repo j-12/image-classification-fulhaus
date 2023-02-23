@@ -18,10 +18,8 @@ For this purpose, we shall use Flask, and develop a UI too, for a great interact
 
 One can clone this repository to run the Flask application 'app.py' and use the service.
 For this,
-clone this repository using git clone ..
-For Mac,
-export flask = app.py
-flask run
+clone this repository using git clone.
+
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -88,6 +86,7 @@ We also need to install Docker dektop, it can be easily done by going to docker 
 (https://www.docker.com)
 
 Next, we build an image -
+
    For Windows
    ```sh
    docker build --tag [NAME] .
@@ -111,6 +110,7 @@ We can also check out the image in Docker Desktop app.
 
 
 We can now run the image by -
+
   Windows-
    ```sh
    docker run --name [Container_Name] [Tag given to the image] 
@@ -128,8 +128,8 @@ We can check my attempt to deploy CI/CD pipeline in the Actions tab.
 Hopefully, this readme was informative with all the required instructions. 
 As for me, working with tensorflow on Mac really challenged me and basically forced me to read through all the issues posted on github. It was an enriching experience to figure out small dependency issues and hardware compatibility problems and then work around them. 
 I also got to practice/learn/study/play with Docker. After this experience, I am confident I can help anyone facing issues with Docker on mac!
-And finally, this was an opportunity to explore the 'Actions' tab - I accept I felt regret, it is soo good and I could have been using it all this time!
-ALl in all, very grateful that I got to work on this project to showcase my skills.
+And finally, this was an opportunity to explore the 'Actions' tab - I accept I felt regret, it is so good and I could have been using it all this time!
+All in all, very grateful that I got to work on this project to showcase my skills.
 Thank you :) 
 
 
