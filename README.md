@@ -1,5 +1,5 @@
 # image-classification-fulhaus
-Image classification model for assessment at Fulhaus
+## 1. Image classification model for assessment at Fulhaus
 
 For the dataset, with 100 images of each class -Bed, Chair and Sofa, I developed the following model.
 
@@ -11,7 +11,7 @@ Training and validation accuracy for the model can be seen below as-
 
 <img width="472" alt="image" src="https://user-images.githubusercontent.com/31993523/220758808-8d4a9f61-5542-4684-a242-607256d9f040.png">
 
-
+## 2. API to access the model
 After achieving good accuracy, we move on to creating an api to access this model conveniently.
 
 For this purpose, we shall use Flask, and develop a UI too, for a great interactive experience and smooth prediction.
@@ -74,7 +74,7 @@ We can see how the model is able to correctly classify the image as a 'Bed' with
 <img width="1125" alt="image" src="https://user-images.githubusercontent.com/31993523/220764244-ad34b988-8337-4581-bfdc-e767657e3c45.png">
 
 <!-- Docker Image -->
-## Docker Image 
+## 3. Docker Image 
 
 To set up the project easily and to deliver software in ready packages with all the dependencies and their version, we create a Docker image. It consists of everything the software needs to run including libraries, system tools, code, and runtime.
 
@@ -121,6 +121,7 @@ We can now run the image by -
    docker run --platform=linux/arm64 --name [Container_Name] [Tag given to the image] 
    ```
 
+## 4. I have developed and uploaded continously on GIT
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
