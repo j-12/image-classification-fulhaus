@@ -121,7 +121,16 @@ We can now run the image by -
    docker run --platform=linux/arm64 --name [Container_Name] [Tag given to the image] 
    ```
 
-## 4. I have developed and uploaded continously on GIT
+## 4. CI/CD pipeline
+We can check my attempt to deploy CI/CD pipeline in the Actions tab.
+
+## 5. Readme
+Hopefully, this readme was informative with all the required instructions. 
+As for me, working with tensorflow on Mac really challenged me and basically forced me to read through all the issues posted on github. It was an enriching experience to figure out small dependency issues and hardware compatibility problems and then work around them. 
+I also got to practice/learn/study/play with Docker. After this experience, I am confident I can help anyone facing issues with Docker on mac!
+And finally, this was an opportunity to explore the 'Actions' tab - I accept I felt regret, it is soo good and I could have been using it all this time!
+ALl in all, very grateful that I got to work on this project to showcase my skills.
+Thank you :) 
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
